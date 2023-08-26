@@ -11,6 +11,6 @@ export default defineNuxtConfig({
     }
   },
   runtimeConfig: {
-    modelPath: '',
+    defaultDirectory: '',
   }
 })

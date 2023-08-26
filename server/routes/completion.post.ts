@@ -1,7 +1,5 @@
 import { createCompletion, loadModel } from 'gpt4all'
 
-const runtimeConfig = useRuntimeConfig()
-
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
   const completion = await handleCompletion(body)
@@ -13,7 +11,7 @@ export default defineEventHandler(async (event) => {
 async function handleCompletion (body: any) {
   console.log(body)
 
-  const model = await loadModel(body.model, { modelPath: runtimeConfig.modelPath, verbose: true })
+  const model = await loadModel(body.model, { modelPath: useRuntimeConfig().defaultDirectory, verbose: true })
 
   return await createCompletion(model, [
     { role: 'user', content: body.prompt }

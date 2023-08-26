@@ -2,14 +2,14 @@
   <div v-if="isLoading" class="absolute w-screen h-screen flex justify-center items-center z-[100]" style="backdrop-filter: blur(2px);">
     <p class="text-4xl">...</p>
   </div>
-  <div class="h-[90vh]">
+  <div class="h-[85vh]">
     <div class="w-full p-2" v-for="message in conversation">
       <Comms
         :message="message"
       />
     </div>
   </div>
-  <div class="h-[10vh] w-full p-2">
+  <div class="h-[15vh] w-full p-2">
     <Prompt />
   </div>
 </template>

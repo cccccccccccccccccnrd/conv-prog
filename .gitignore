@@ -1,4 +1,5 @@
 models/*
+libraries/*
 
 # Nuxt dev/build outputs
 .output

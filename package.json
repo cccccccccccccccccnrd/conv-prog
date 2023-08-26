@@ -1,5 +1,5 @@
 {
-  "name": "llllllms",
+  "name": "conv-prog",
   "private": true,
   "scripts": {
     "build": "nuxt build",

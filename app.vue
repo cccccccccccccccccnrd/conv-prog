@@ -1,29 +1,47 @@
 <template>
-  <div
-    v-if="isLoading"
-    class="absolute w-screen h-screen flex justify-center items-center z-[100]"
-    style="backdrop-filter: blur(2px)"
-  >
-    <p class="text-4xl">...</p>
-  </div>
-  <div class="h-screen flex flex-col gap-2 px-2 pt-2">
-    <div class="c flex-grow border border-black">
-      <div class="w-full" v-for="message in conversation">
-        <Comms :message="message" />
-      </div>
-    </div>
-    <div class="h-[10vh] w-full overflow-hidden">
-      <Prompt/>
-    </div>
+  <div class="h-screen w-full overflow-hidden flex">
+    <Conv class="max-w-[1200px] min-w-[100px]" v-for="conv in c" />
   </div>
 </template>
 
 <script setup lang="ts">
-const conversation = useState('conversation', () => [])
-const isLoading = useState('isLoading')
+const c = ref(1)
+
+onMounted(() => {
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') {
+      left()
+    } else if (e.key === 'ArrowRight') {
+      right()
+    }
+  })
+})
+
+function left () {
+  if (c.value <= 1) {
+    return
+  }
+  c.value--
+}
+
+function right () {
+  if (c.value >= 10) {
+    return
+  }
+  c.value++
+}
 </script>
 
 <style>
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  padding: 0 1em 0 0;
+  margin: 0;
+}
+
 body {
   background: rgba(239, 239, 239, 1);
   background: black;

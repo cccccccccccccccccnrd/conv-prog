@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full flex flex-col items-center">
+  <div class="flex flex-col items-center gap-2">
     <select class="w-[50vw]" name="models" v-model="model">
       <option v-for="model in models" :value="model">{{ model }}</option>
     </select>
@@ -8,8 +8,8 @@
       @keydown.enter="handleCompletion"
       ref="input"
       type="text"
-      class="c w-full h-full p-5 mt-2 bg-transparent text-4xl outline-none border-none"
-      placeholder="Type something..."
+      class="w-full p-5 bg-transparent text-4xl outline-none border-none"
+      placeholder="Prompt something..."
     />
   </div>
 </template>

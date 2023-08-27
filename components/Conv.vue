@@ -27,7 +27,7 @@
           ref="input"
           type="text"
           class="w-full p-5 bg-transparent text-4xl outline-none border-none"
-          placeholder="Prompt something..."
+          placeholder="Ignore prev..."
         />
       </div>
     </div>

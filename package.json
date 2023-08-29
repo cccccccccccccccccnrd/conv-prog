@@ -1,20 +1,23 @@
 {
   "name": "conv-prog",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "cd src && npm run dev",
+    "serve": "electron ."
   },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.8.0",
-    "@types/node": "^18.17.3",
-    "nuxt": "^3.6.5"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cccccccccccccccccnrd/conv-prog.git"
   },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cccccccccccccccccnrd/conv-prog/issues"
+  },
+  "homepage": "https://github.com/cccccccccccccccccnrd/conv-prog#readme",
   "dependencies": {
-    "gpt4all": "^2.2.0"
+    "electron": "^26.1.0"
   }
 }

@@ -16,9 +16,11 @@ async function handleCompletion (body: any) {
     verbose: true
   })
 
+  console.log('options', body.options)
+
   return await createCompletion(
     model,
     [{ role: 'user', content: body.prompt }],
-    { verbose: true }
+    { verbose: true, ...body.options }
   )
 }

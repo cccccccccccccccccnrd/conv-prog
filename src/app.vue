@@ -33,7 +33,11 @@ function right () {
 </script>
 
 <style>
-select {
+::-webkit-scrollbar {
+    display: none;
+}
+
+select, input {
   appearance: none;
   background-color: transparent;
   border: none;
